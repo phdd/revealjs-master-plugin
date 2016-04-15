@@ -24,7 +24,7 @@ Reveal.initialize({
 
     controls: false,
     dependencies: [
-        { src: 'http://lab.hakim.se/reveal-js/lib/js/classList.js' },
+        /* [...] */
         { src: 'master.js', async: true }
     ]
 });
