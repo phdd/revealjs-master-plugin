@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Reveal.js Master Plugin by phdd</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Reveal.js Master Plugin</h1>
+        <p>Headers, Footers and conditional Page-Numbering for Reveal.js</p>
+
+        <p class="view"><a href="https://github.com/phdd/revealjs-master-plugin">View the Project on GitHub <small>phdd/revealjs-master-plugin</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/phdd/revealjs-master-plugin/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/phdd/revealjs-master-plugin/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/phdd/revealjs-master-plugin">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="initialization" class="anchor" href="#initialization" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Initialization</h1>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">Reveal</span>.<span class="pl-en">initialize</span>({
+    master<span class="pl-k">:</span> {
+        header<span class="pl-k">:</span> {
+            size<span class="pl-k">:</span>  <span class="pl-s"><span class="pl-pds">'</span>60%<span class="pl-pds">'</span></span>,
+            left<span class="pl-k">:</span>  <span class="pl-s"><span class="pl-pds">'</span>Great Presentation<span class="pl-pds">'</span></span>,
+            right<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>&lt;img src="image.png" height="100px" /&gt;<span class="pl-pds">'</span></span>,
+        },
+
+        footer<span class="pl-k">:</span> {
+            size<span class="pl-k">:</span>   <span class="pl-s"><span class="pl-pds">'</span>60%<span class="pl-pds">'</span></span>,
+            left<span class="pl-k">:</span>   <span class="pl-s"><span class="pl-pds">'</span>John Doe<span class="pl-pds">'</span></span>,
+            center<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>Fancy Something<span class="pl-pds">'</span></span>,
+            right<span class="pl-k">:</span>  <span class="pl-s"><span class="pl-pds">'</span>#{slideNumber} / #{slideCount}<span class="pl-pds">'</span></span>
+        }
+    },
+
+    controls<span class="pl-k">:</span> <span class="pl-c1">false</span>,
+    dependencies<span class="pl-k">:</span> [
+        <span class="pl-c">/* [...] */</span>
+        { src<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>master.js<span class="pl-pds">'</span></span>, async<span class="pl-k">:</span> <span class="pl-c1">true</span> }
+    ]
+});</pre></div>
+
+<h1>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h1>
+
+<div class="highlight highlight-text-html-basic"><pre>    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>reveal<span class="pl-pds">"</span></span>&gt;
+        &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>slides<span class="pl-pds">"</span></span>&gt;
+            &lt;<span class="pl-ent">section</span> <span class="pl-e">header</span>=<span class="pl-s"><span class="pl-pds">"</span>false<span class="pl-pds">"</span></span> <span class="pl-e">footer</span>=<span class="pl-s"><span class="pl-pds">"</span>false<span class="pl-pds">"</span></span> <span class="pl-e">count</span>=<span class="pl-s"><span class="pl-pds">"</span>false<span class="pl-pds">"</span></span>&gt;
+                Title Slide
+            &lt;/<span class="pl-ent">section</span>&gt;
+            &lt;<span class="pl-ent">section</span>&gt;
+                Slide with header and footer.
+            &lt;/<span class="pl-ent">section</span>&gt;
+            &lt;<span class="pl-ent">section</span> <span class="pl-e">footer</span>=<span class="pl-s"><span class="pl-pds">"</span>false<span class="pl-pds">"</span></span> <span class="pl-e">count</span>=<span class="pl-s"><span class="pl-pds">"</span>false<span class="pl-pds">"</span></span>&gt;
+                Uncounted slide with header only.
+            &lt;/<span class="pl-ent">section</span>&gt;
+            &lt;<span class="pl-ent">section</span>&gt;
+                Another slide with header and footer.
+            &lt;/<span class="pl-ent">section</span>&gt;
+            &lt;<span class="pl-ent">section</span> <span class="pl-e">header</span>=<span class="pl-s"><span class="pl-pds">"</span>false<span class="pl-pds">"</span></span>&gt;
+                Counted slide without header.
+            &lt;/<span class="pl-ent">section</span>&gt;
+            &lt;<span class="pl-ent">section</span> <span class="pl-e">header</span>=<span class="pl-s"><span class="pl-pds">"</span>false<span class="pl-pds">"</span></span> <span class="pl-e">footer</span>=<span class="pl-s"><span class="pl-pds">"</span>false<span class="pl-pds">"</span></span> <span class="pl-e">count</span>=<span class="pl-s"><span class="pl-pds">"</span>false<span class="pl-pds">"</span></span>&gt;
+                Questions?
+            &lt;/<span class="pl-ent">section</span>&gt;
+        &lt;/<span class="pl-ent">div</span>&gt;
+    &lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/phdd">phdd</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
