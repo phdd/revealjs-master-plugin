@@ -5,32 +5,34 @@ Headers, Footers and conditional Page-Numbering for Reveal.js
 
 ## Initialization
 
-    Reveal.initialize({
-        master: {
-            header: {
-                size:  '60%',
-                left:  'Great Presentation',
-                right: '<img src="image.png" height="100px" />',
-            },
-
-            footer: {
-                size:   '60%',
-                left:   'John Doe',
-                center: 'Fancy Something',
-                right:  '#{slideNumber} / #{slideCount}'
-            }
+```javascript
+Reveal.initialize({
+    master: {
+        header: {
+            size:  '60%',
+            left:  'Great Presentation',
+            right: '<img src="image.png" height="100px" />',
         },
 
-        controls: false,
-        dependencies: [
-            { src: 'http://lab.hakim.se/reveal-js/lib/js/classList.js' },
-            { src: 'master.js', async: true }
-        ]
-    });
+        footer: {
+            size:   '60%',
+            left:   'John Doe',
+            center: 'Fancy Something',
+            right:  '#{slideNumber} / #{slideCount}'
+        }
+    },
 
+    controls: false,
+    dependencies: [
+        { src: 'http://lab.hakim.se/reveal-js/lib/js/classList.js' },
+        { src: 'master.js', async: true }
+    ]
+});
+```
 
 ## Usage
 
+```html
     <div class="reveal">
         <div class="slides">
             <section header="false" footer="false" count="false">
@@ -53,7 +55,7 @@ Headers, Footers and conditional Page-Numbering for Reveal.js
             </section>
         </div>
     </div>
-
+```
 
 ## License
 
